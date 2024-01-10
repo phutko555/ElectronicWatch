@@ -1,6 +1,5 @@
 package com.epam.rd.autotasks.meetautocode;
 
-
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -14,16 +13,12 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
 class ElectronicWatchTest {
 
     @ParameterizedTest
     @MethodSource("testCases")
     void test(int input, String expected) {
-        String result = YourClass.yourMethod(input);
-        assertEquals(expected, result);
-
-    }
+        String inputText = Integer.toString(input);
 
         final ByteArrayInputStream controlledIn = new ByteArrayInputStream(inputText.getBytes(StandardCharsets.UTF_8));
         InputStream defaultIn = System.in;
@@ -63,3 +58,4 @@ class ElectronicWatchTest {
         );
     }
 }
+
