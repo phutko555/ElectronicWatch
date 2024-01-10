@@ -20,8 +20,10 @@ class ElectronicWatchTest {
     @ParameterizedTest
     @MethodSource("testCases")
     void test(int input, String expected) {
+        String result = YourClass.yourMethod(input);
+        assertEquals(expected, result);
 
-        String inputText = Integer.toString(input);
+    }
 
         final ByteArrayInputStream controlledIn = new ByteArrayInputStream(inputText.getBytes(StandardCharsets.UTF_8));
         InputStream defaultIn = System.in;
